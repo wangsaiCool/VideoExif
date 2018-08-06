@@ -1,4 +1,4 @@
-# extractVideoExifByExif
+# extractVideoExifByFFmpeg
 ## 目的
 利用Java调用FFmpeg,提取视频的exif信息
 
