@@ -13,15 +13,20 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.awt.image.DirectColorModel;
+import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.xml.bind.SchemaOutputResolver;
 
 public class VideoExifExtractor {
 
@@ -48,12 +53,16 @@ public class VideoExifExtractor {
     public static void main(String[] args) throws org.apache.commons.cli.ParseException {
         CommandLineParser parser = new BasicParser();
         Options options = new Options();
+        //help
         options.addOption("help", false, "Print the usage info.");
+        //指定文件路径
         options.addOption("dir", true, "Specify the file Directory.\nFor example,\n" +
                 "/home/Downloads/");
         options.addOption("file", false, "Specify the file name.\nFor example,\n" +
                 "Titanic.map4");
+
         CommandLine commandLine = parser.parse(options, args);
+
         if (commandLine.hasOption("help")) {
             Collection<Option> opts = options.getOptions();
             System.out.println("===================================");
@@ -62,14 +71,43 @@ public class VideoExifExtractor {
             }
             System.out.println("===================================");
         }
+
         if (commandLine.hasOption("dir")){
             String path = commandLine.getOptionValue("dir");
             Settings.setDir(path);
         }
+
         if (commandLine.hasOption("file")){
             String fileName = commandLine.getOptionValue("file");
             Settings.setName(fileName);
         }
+
+        //未指定具体文件
+        if (Settings.isSetDir() && !Settings.isSetName()) {
+            try {
+
+                List<File> files = getFilesAbsolutePath(Settings.getDir());
+                for (int i = 0; i < files.size(); i++) {
+                    System.out.println(files.get(i).getName());
+                    System.out.println(generateExifJson(files.get(i).getAbsolutePath()));
+                    System.out.println("================================================");
+                }
+            } catch (IOException e) {
+                LOGGER.error("Get file error.", e);
+            }
+        }
+        //指定具体文件
+        else if (Settings.isSetDir() && Settings.isSetName()){
+            String dir = Settings.getDir();
+            if (!dir.endsWith("/")) {
+                dir += "/";
+            }
+            System.out.println(Settings.getName() + ":");
+            System.out.println(generateExifJson(dir + Settings.getName()));
+            System.out.println("\n");
+        }
+
+
     }
 
     /**
@@ -249,5 +287,41 @@ public class VideoExifExtractor {
         int sec = (int) (numDD * 10000);
         retStrB.append(sec + "/10000");
         return retStrB.toString();
+    }
+
+    private static List<File> getFilesAbsolutePath(String dir) throws IOException {
+        List<File> namesList = new ArrayList<>();
+        List<File> notFoundNames = new ArrayList<>();
+        File dir1 = new File(dir);
+        if (!dir1.exists()) {
+            LOGGER.error(String.format("%s not Found.", dir));
+            throw new IOException(String.format("%s not Found.", dir));
+        }
+
+        namesList = getFileName(dir1, namesList, notFoundNames);
+        for (int i = 0; i < notFoundNames.size(); i++) {
+            if (i == 0) {
+                System.out.println("Files invalid:");
+            }
+            System.out.println(notFoundNames.get(i));
+        }
+        System.out.println();
+        return namesList;
+    }
+
+    private static List<File> getFileName(File name, List<File> namesList, List<File> notFoundNames) {
+        if (!name.exists()) {
+            notFoundNames.add(name);
+        }
+        if (name.isDirectory()) {
+            File[] files = name.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                getFileName(files[i], namesList, notFoundNames);
+            }
+        }
+        if (name.isFile()) {
+            namesList.add(name);
+        }
+        return namesList;
     }
 }

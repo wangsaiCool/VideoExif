@@ -4,7 +4,6 @@
     <list default="true" id="ae64f219-4756-48e3-a104-ab5dcbe45b26" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/wangsai/utils/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/wangsai/utils/Settings.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="FFmpegUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/FFmpegUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+            <state relative-caret-position="261">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoExifExtractor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VideoExifExtractor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+            <state relative-caret-position="698">
+              <caret line="122" column="7" lean-forward="true" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#generateExifJson#0;class#VideoExifExtractor#0" />
@@ -50,20 +49,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Settings.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/Settings.java">
+      <file leaf-file-name="IOException.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk8/src.zip!/java/io/IOException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="308">
+              <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk8/src.zip!/java/io/File.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="452" column="18" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
               <folding>
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#454#455#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
+                <element signature="e#91558#91559#0" expanded="true" />
+                <element signature="e#91590#91591#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,8 +104,8 @@
         <option value="$PROJECT_DIR$/src/main/java/VideoExifExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangsai/utils/FFmpegUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/java/cn/wangsai/utils/Settings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java" />
       </list>
     </option>
   </component>
@@ -156,6 +158,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="VideoExifExtractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.wangsai.VideoExifExtractor" />
+      <module name="extractVideoExifByFFmpeg" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.wangsai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -197,6 +210,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VideoExifExtractor" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -212,19 +230,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1978" y="-11" width="1863" height="1092" extended-state="6" />
+    <frame x="1979" y="-4" width="1861" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32948583" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.1591623" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32948583" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2339979" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.2523416" />
@@ -248,7 +267,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2523416" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2523416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -259,7 +278,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.1591623" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2339979" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -271,6 +290,18 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java</url>
+          <line>100</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/FFmpegUtils.java">
@@ -351,35 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/FFmpegUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#generateExifJson#0;class#VideoExifExtractor#0" />
-            <element signature="method#generateExifJson#0;class#VideoExifExtractor#0" />
-            <element signature="docComment;method#extractContent#0;class#VideoExifExtractor#0" />
-            <element signature="method#extractContent#0;class#VideoExifExtractor#0" />
-            <element signature="docComment;method#formatDateTime#0;class#VideoExifExtractor#0" />
-            <element signature="method#formatDateTime#0;class#VideoExifExtractor#0" />
-            <element signature="docComment;method#formatGPSLocation#0;class#VideoExifExtractor#0" />
-            <element signature="method#formatGPSLocation#0;class#VideoExifExtractor#0" />
-            <element signature="method#transferDDToDegreeMinSec#0;class#VideoExifExtractor#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
@@ -393,6 +395,53 @@
             <element signature="e#484#485#0" expanded="true" />
             <element signature="e#540#541#0" expanded="true" />
             <element signature="e#582#583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk8/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="452" column="18" selection-start-line="452" selection-start-column="18" selection-end-line="452" selection-end-column="18" />
+          <folding>
+            <element signature="e#91558#91559#0" expanded="true" />
+            <element signature="e#91590#91591#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk8/src.zip!/java/io/IOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/utils/FFmpegUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/wangsai/VideoExifExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="698">
+          <caret line="122" column="7" lean-forward="true" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#generateExifJson#0;class#VideoExifExtractor#0" />
+            <element signature="method#generateExifJson#0;class#VideoExifExtractor#0" />
+            <element signature="docComment;method#extractContent#0;class#VideoExifExtractor#0" />
+            <element signature="method#extractContent#0;class#VideoExifExtractor#0" />
+            <element signature="docComment;method#formatDateTime#0;class#VideoExifExtractor#0" />
+            <element signature="method#formatDateTime#0;class#VideoExifExtractor#0" />
+            <element signature="docComment;method#formatGPSLocation#0;class#VideoExifExtractor#0" />
+            <element signature="method#formatGPSLocation#0;class#VideoExifExtractor#0" />
+            <element signature="method#transferDDToDegreeMinSec#0;class#VideoExifExtractor#0" />
           </folding>
         </state>
       </provider>
