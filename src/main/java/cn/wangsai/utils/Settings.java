@@ -7,23 +7,23 @@ public class Settings {
 
     private static String dir = "";
     private static String name = "";
-    private static boolean isSetName = false;
-    private static boolean isSetDir = false;
-
-    public static boolean isSetName() {
-        return isSetName;
-    }
-
-    public static void setIsSetName(boolean isSetName) {
-        Settings.isSetName = isSetName;
-    }
+    private static boolean setDir = false;
+    private static boolean setName = false;
 
     public static boolean isSetDir() {
-        return isSetDir;
+        return setDir;
     }
 
-    public static void setIsSetDir(boolean isSetDir) {
-        Settings.isSetDir = isSetDir;
+    public static void setIsSetDir(boolean setDir) {
+        Settings.setDir = setDir;
+    }
+
+    public static boolean isSetName() {
+        return setName;
+    }
+
+    public static void setIsSetName(boolean setName) {
+        Settings.setName = setName;
     }
 
     public static String getDir() {

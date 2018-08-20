@@ -49,7 +49,7 @@ public class VideoExifExtractor {
         CommandLineParser parser = new BasicParser();
         Options options = new Options();
         options.addOption("help", false, "Print the usage info.");
-        options.addOption("dir", true, "Specify the file path.\nFor example,\n" +
+        options.addOption("dir", true, "Specify the file Directory.\nFor example,\n" +
                 "/home/Downloads/");
         options.addOption("file", false, "Specify the file name.\nFor example,\n" +
                 "Titanic.map4");
