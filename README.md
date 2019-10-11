@@ -1,15 +1,16 @@
 # extractVideoExifByFFmpeg
 ## 目的
-利用Java调用FFmpeg,提取视频的exif信息
+    利用Java调用FFmpeg,提取视频的exif信息
 
-## 用到的其他工具
-1,第三方库FFmpeg/FFprobe;    
-2,FFmpeg安装及使用  
+## 依赖第三工具
+    1, FFmpeg
+    
+## FFmpeg安装及使用  
 
-    2.1,下载地址    
+    1,下载地址    
         http://ffmpeg.org/releases/    
 
-    2.2,安装：    
+    2,安装：    
         $ sudo apt-get install yasm    
 
         $ ./configure --enable-shared --prefix=/home/work/soft/ffmpeg/
@@ -18,9 +19,7 @@
 
         $ sudo make install 
 
-
-
-    2.3,安装成功：      
+    3,安装成功：      
 
         异常及解决方法：  
         $ /home/work/soft/ffmpeg/bin/ffmpeg    
@@ -54,16 +53,34 @@
             usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
 
 
-
-
-
 ## 支持的视频格式
-.mp4, .mov, .rmvb, .flv, .3gp, .f4v, others...
+    .mp4, .mov, .rmvb, .flv, .3gp, .f4v, others...
 
 ## 使用说明
-1,如何使用或者命令行      
-1.1 命令行参数   
-1.2 需要支持的参数/默认参数   
-2,支持的exif信息   
-3,   
+
+### 如何使用命令行提取EXIF信息   
+  
+    1 命令行提取Demo
+    .your path/bin/ffprobe -i 文件名 需要提取的参数 
+    
+    1.1 Demo1，提取视频长宽高、时长、旋转信息
+    .your path/bin/ffprobe -i filename  -select_streams v:0 -show_entries       stream=width,height,duration:stream_tags=rotate:format_tags -v quiet -of json
+
+    1.2 Demo2，提取等视频长宽高、帧率、时长、旋转信息、编码方式
+    .your path/bin/ffprobe -i 文件名  
+        -select_streams v:0 
+        -show_entries stream=codec_name,codec_long_name,width,height,color_range,color_space,color_transfer,color_primaries,
+               chroma_location,r_frame_rate,avg_frame_rate,start_time,duration_ts,duration,bit_rate,bits_per_raw_sample:stream_tags=rotate:format=format_name,format_long_name,probe_score:format_tags
+         -v quiet -of json
+
+    2 视频EXIF字段信息说明: https://wcs.chinanetcenter.com/document/API/Appendix/avinfo-description
+
+    3 更多命令行参数，参考: http://ffmpeg.org/documentation.html
+
+    4 视频旋转信息说明，参考: http://note.youdao.com/noteshare?id=72e9afa826efa0228cf374779cbc9313
+
+
+### 如何嵌入到Java代码使用
+    参考: ../cn.wangsai.VideoExifExtractor.main
+
 
